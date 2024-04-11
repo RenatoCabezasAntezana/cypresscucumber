@@ -1,6 +1,6 @@
 class loginPage {
     elements = {
-        inputUser: () => cy.get('[placeholder="Username"]'),
+        inputUser: () => cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'),
         inputPassword: () => cy.get('[placeholder="Password"]'),
         buttonSubmit: () => cy.get('[type="submit"]')
     }
