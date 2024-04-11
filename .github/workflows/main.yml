@@ -3,10 +3,10 @@ name: Cypress Tests
 on:
   push:
     branches:
-      - main  # Puedes cambiar esto según la rama que quieras utilizar
+      - "master-renato"
   pull_request:
     branches:
-      - main  # Puedes cambiar esto según la rama que quieras utilizar
+      - "master-renato"  
 
 jobs:
   cypress-run:
