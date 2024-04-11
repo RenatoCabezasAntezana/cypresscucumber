@@ -23,9 +23,3 @@ jobs:
           
       - name: Cypress.io
         uses: cypress-io/github-action@v6.5.0
-        
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run Cypress tests
-        run: npm run test
