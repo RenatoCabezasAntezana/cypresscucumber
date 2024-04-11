@@ -1,0 +1,29 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main  # Puedes cambiar esto según la rama que quieras utilizar
+  pull_request:
+    branches:
+      - main  # Puedes cambiar esto según la rama que quieras utilizar
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - name: Cypress.io
+        uses: cypress-io/github-action@v6.5.0
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        run: npm run test
