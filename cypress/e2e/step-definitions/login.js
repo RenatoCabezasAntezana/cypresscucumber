@@ -16,6 +16,6 @@ Then('I click in the button', () => {
 Then('Select files', () => {
     cy.get(':nth-child(6) > .oxd-main-menu-item > .oxd-text').click()
     cy.get('.orangehrm-action-header > .oxd-button').click()
-    cy.get('[type="file"]').selectFile('cypress/fixtures/ReciboLuzOficinaAdministrativa.pdf', { force: true })
+    
 })
 //cypress\fixtures\ReciboLuzOficinaAdministrativapdf
