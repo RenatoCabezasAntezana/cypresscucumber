@@ -1,0 +1,26 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Cypress IO CI
+
+on:
+  push:
+    branches: [ "master-renato" ]
+  pull_request:
+    branches: [ "master-renato" ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+   
+    steps:
+      - name: Cypress.io
+        uses: cypress-io/github-action@v6.5.0
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Run Cypress tests
+        run: npm run cypress:run
+
+    
