@@ -2,7 +2,7 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import loginPage from "../pages/loginPage";
 
 Given('I open Orange Page', () => {
-    cy.visit('/').wait(10000)
+    cy.visit('https://opensource-demo.orangehrmlive.com/').wait(1000)
 })
 
 When('I write {string} and {string}', (username, password) => {
@@ -16,6 +16,7 @@ Then('I click in the button', () => {
 Then('Select files', () => {
     cy.get(':nth-child(6) > .oxd-main-menu-item > .oxd-text').click()
     cy.get('.orangehrm-action-header > .oxd-button').click()
+    loginPage.selectFileCypress()
     
 })
 //cypress\fixtures\ReciboLuzOficinaAdministrativapdf

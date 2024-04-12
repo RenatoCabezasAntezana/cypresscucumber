@@ -6,12 +6,12 @@ module.exports = defineConfig({
   viewportWidth: 1600,
   viewportHeight: 960,
   fixturesFolder: 'cypress/fixtures',
- 
+
   e2e: {
     "specPattern": "**/*.feature",
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
     },
-    baseUrl: "https://opensource-demo.orangehrmlive.com/"
+    baseUrl: "https://restful-booker.herokuapp.com/"
   },
 });
